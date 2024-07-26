@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="plugin.video.youtube" name="YouTube" version="7.0.7" provider-name="anxdpanic, bromix, MoojMidge">
+<addon id="plugin.video.youtube" name="YouTube" version="7.0.7+d10" provider-name="anxdpanic, bromix, MoojMidge">
     <requires>
         <import addon="xbmc.python" version="3.0.0"/>
         <import addon="script.module.requests" version="2.27.1"/>
@@ -62,7 +62,7 @@
         <description lang="es_ES">YouTube es uno de los sitios web para compartir vídeos más grandes del mundo.</description>
         <description lang="es_MX">YouTube es uno de los más grandes sitios web de intercambio de videos del mundo.</description>
         <description lang="fi_FI">YouTube on yksi maailman suurimmista videoiden jakosivustoista.</description>
-        <description lang="fr_FR">YouTube est l&apos;un des plus grands sites de partage vidéos du monde.</description>
+        <description lang="fr_FR">YouTube est l'un des plus grands sites de partage vidéos du monde.</description>
         <description lang="he_IL">YouTube הוא אחד מאתרי שיתוף הווידאו הגדולים בעולם.</description>
         <description lang="hr_HR">YouTube je jedna od najvećih stranica za dijeljenje video sadržaja na svijetu.</description>
         <description lang="hu_HU">A YouTube világ egyik legnagyobb videómegosztó weboldala.</description>
@@ -89,7 +89,7 @@
         <disclaimer lang="es_ES">Este add-on no está respaldado por Google</disclaimer>
         <disclaimer lang="es_MX">Este complemento no está respaldado por Google</disclaimer>
         <disclaimer lang="fi_FI">Google ei tue tätä lisäosaa</disclaimer>
-        <disclaimer lang="fr_FR">Ce module n&apos;est pas validé par Google</disclaimer>
+        <disclaimer lang="fr_FR">Ce module n'est pas validé par Google</disclaimer>
         <disclaimer lang="hr_HR">Ovaj dodatak nije podržan od strane Googlea</disclaimer>
         <disclaimer lang="id_ID">Plugin ini tidak didukung oleh Google</disclaimer>
         <disclaimer lang="it_IT">Questo plugin non è approvato da Google</disclaimer>
@@ -105,5 +105,33 @@
         <disclaimer lang="vi_VN">Plugin này không được xác nhận bởi Google</disclaimer>
         <disclaimer lang="zh_CN">此插件未被谷歌认可</disclaimer>
         <disclaimer lang="zh_TW">此附加元件未由Google支持</disclaimer>
-    </extension>
+    <news>## v7.0.7
+### Fixed
+- Fixed not being able to re-refresh a directory listing that has already been refreshed
+- Fixed various window and history nagivation issues
+- Fixed http server idle shutdown not restarting if plugin is run but GUI is still idle
+- Additional improvements to busy dialog crash workaround
+- Workaround for new settings interface not updated correctly
+- Fix bookmarks icon background colour
+- Fix adding channel items directly to bookmarks
+- Fixes for player monitoring preventing item being marked as watched
+- Fix invalid pageToken error by removing jump from unsupported listings
+- Fix issues with post play refresh possibly causing loss of window history
+- Fix bug that could lead to plugin continuously reloading
+- Attempted fix for socket error 98 on Linux
+  - For error 10013 on Windows try either of the following:
+    - Start-Process powershell -Verb runAs -ArgumentList "net stop winnat; net start winnat"
+    - Start-Process powershell -Verb runAs -ArgumentList "net stop hns; net start hns"
+- Fix changing fanart type on My Subscriptions
+- Fix not using thumbnail fanart for channels/subscriptions/playlists when enabled
+- Fix My Subscriptions threading issues
+- Fix failing to login
+- Improve resource usage
+- Fix adding video to playlist
+- Fix plugin settings raising exception in Kodi 19-20
+- Fix location icon background colour
+
+### Changed
+- Removed Settings &gt; Advanced &gt; Views &gt; Show channel fanart
+  - Now included as option in Settings &gt; Advanced &gt; Views &gt; Show </news></extension>
 </addon>

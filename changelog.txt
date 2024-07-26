@@ -1,3 +1,8 @@
+## v7.0.7+d10
+### Changed
+- Do not reload container after deleting playlist item
+- Cache playlist items for 5 minutes only
+
 ## v7.0.7
 ### Fixed
 - Fixed not being able to re-refresh a directory listing that has already been refreshed
