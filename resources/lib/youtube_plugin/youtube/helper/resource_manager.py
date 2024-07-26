@@ -200,8 +200,7 @@ class ResourceManager(object):
                 else:
                     batch = self._data_cache.get_item(
                         batch_id,
-                        self._data_cache.ONE_HOUR if page_token
-                        else self._data_cache.ONE_MINUTE * 5
+                        self._data_cache.ONE_MINUTE * 5
                     )
                 if not batch:
                     to_update.append(batch_id)
